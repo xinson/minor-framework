@@ -12,9 +12,9 @@
     }
   ],
   "autoload": {
-    "classmap": [
-      "src/framework"
-    ]
+    "psr-4": {
+      "Minor\\": "src/"
+    }
   },
   "require": {
     "php": ">=5.3.0",
