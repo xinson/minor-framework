@@ -1,17 +1,19 @@
 {
-    "name": "xinson/minor-framework",
-    "description": "Minor-framework",
-    "license": "MIT",
-    "keywords": ["Minor-framework"],
-    "version": "1.0",
-   "authors": [
-        {
-        "name": "xinson"
-        }
-    ],
+  "name": "xinson/minor-framework",
+  "description": "Minor-framework",
+  "license": "MIT",
+  "keywords": [
+    "Minor-framework"
+  ],
+  "version": "1.0",
+  "authors": [
+    {
+      "name": "xinson"
+    }
+  ],
   "autoload": {
     "classmap": [
-      "src/"
+      "src/framework"
     ]
   },
   "require": {
