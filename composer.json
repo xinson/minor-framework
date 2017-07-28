@@ -1,0 +1,31 @@
+{
+    "name": "xinson/minor-framework",
+    "description": "Minor-framework",
+    "license": "MIT",
+    "keywords": ["Minor-framework"],
+    "version": "1.0",
+   "authors": [
+        {
+        "name": "xinson"
+        }
+    ],
+  "autoload": {
+    "psr-0": {
+      "Phake": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.3.0",
+    "phake/phake": "2.*",
+    "chrisboulton/php-resque": "1.2.*"
+  },
+  "config": {
+    "secure-http": false
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
