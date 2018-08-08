@@ -186,7 +186,7 @@ class Model
 
     public function delete()
     {
-        if(!empty($this->getId())) {
+        if($this->getData()) {
             $where = $this->getPrimary() . ' = :' . $this->getPrimary();
             $sql = "DELETE FROM {$this->getTable()} WHERE $where";
             $data = array($this->getPrimary() => $this->getId());
