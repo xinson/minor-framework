@@ -156,17 +156,19 @@ class Model
         if(!empty($this->exists)){
             $different = array();
             $bind = array();
-            foreach ($data as $d => $v){
-                if(array_key_exists($d,$this->original)) {
-                    //查找update的数据 是否有更新
-                    if ($this->original[$d]!=$v && !strcmp((string)$this->original[$d],(string)$v) !== 0){
-                        $different[$d] = $v;
-                        $bind[$d] = $d.' = :'.$d;
+            if(!empty($data)) {
+                foreach ($data as $d => $v) {
+                    if (array_key_exists($d, $this->original)) {
+                        //查找update的数据 是否有更新
+                        if ($this->original[$d] != $v && !strcmp((string)$this->original[$d], (string)$v) !== 0) {
+                            $different[$d] = $v;
+                            $bind[$d] = $d . ' = :' . $d;
+                        }
                     }
                 }
             }
             if(!empty($different) && is_array($different)){
-                $where = $this->getPrimary() .' = :'.$this->getId();
+                $where = $this->getPrimary() .' = '.(int)$this->getId();
                 $fields = implode(',', $bind);
                 $sql = "UPDATE {$this->getTable()} SET $fields WHERE $where";
                 return $this->pdo->update($sql,$different);
