@@ -18,7 +18,7 @@ class Application
         // 创建一个IOC容器
         $container = new Container;
 
-        $configs = glob(PATH . "/app/config/*.php");
+        $configs = glob(PATH . "/app/Config/*.php");
         $configArray = array();
         if (!empty($configs)) {
             foreach ($configs as $d => $v) {
