@@ -25,7 +25,7 @@ class Router
 	{
 		array_push(self::$controller, $arguments[1]);
 		array_push(self::$methods, strtoupper($name));
-		array_push(self::$routes, dirname($_SERVER['PHP_SELF']) . $arguments[0]);
+		array_push(self::$routes, $arguments[0]);
 	}
 
 	/**
